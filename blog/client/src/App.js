@@ -11,7 +11,7 @@ import Write from "./pages/Write";
 import Single from "./pages/Single";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import "./App.css";
+import "./style.scss";
 
 const Layout = () => {
   return (
@@ -45,8 +45,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
-      <RouterProvider router={router} />
+    <div className="app">
+      <div className="container">
+        <RouterProvider router={router} />
+      </div>
     </div>
   );
 }
