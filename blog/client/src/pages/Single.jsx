@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Edit from '../img/edit.png'
 import Delete from '../img/delete.png'
 import { Tooltip } from 'react-tooltip'
+import Menu from '../components/Menu'
 
 const Single = () => {
   return (
@@ -51,7 +52,7 @@ const Single = () => {
           maiores molestias commodi!
         </p>
       </div>
-      <div className='menu'>m</div>
+      <Menu />
     </div>
   )
 }
