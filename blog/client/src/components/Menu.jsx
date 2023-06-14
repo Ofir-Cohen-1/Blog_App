@@ -30,7 +30,7 @@ const Menu = () => {
 
   return (
     <div className='menu'>
-      <h1>Other posts yoy may like</h1>
+      <h1>Other posts you may like</h1>
       {posts.map((post) => (
         <div className='post' key={post.id}>
           <img src={post.img} alt='' />
