@@ -8,10 +8,10 @@ export const register = (req, res) => {
     if (err) return res.json(err)
     if (data.length) return res.status(409).json('User already exists!')
 
-    const salt = bcrypt.generateSalt(10)
-    const hash = bcrypt.hashSync(req.body.password, salt)
+    // const salt = bcrypt.genSalt(10)
+    const hash = bcrypt.hash(req.body.password, 10)
 
-    const q = "INSERT INTO users('username','email','password') VALUES (?)"
+    const q = 'INSERT INTO users (`username`,`email`,`password`) VALUES (?)'
     const values = [req.body.username, req.body.email, hash]
 
     db.query(q, [values], (err, data) => {
